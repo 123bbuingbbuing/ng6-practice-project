@@ -1,0 +1,29 @@
+<div class="position-relative overflow-hidden text-center bg-light">
+  <div class="col-md-6 p-lg-5 mx-auto my-5">
+    <h1 class="display-2 font-weight-normal">WANNAONE</h1>
+    <p>
+      <small>
+
+        11 member boy group who came from different entertainment company. Gone through a cruel survival show that sharpened their skills and talent. Are you ready to get blown away by their charisma? <br>
+        Check them out below!
+
+      </small>
+    </p>
+  </div>
+  <div class="product-device box-shadow d-none d-md-block"></div>
+  <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+</div>
+<div class="container mt-3 mb-3">
+  <div class="row">
+      <div class="col-sm-4" *ngFor="let m of members">
+          <div class="card mb-3">
+              <a routerLink="/profile/{{ m.id }}"> <img class="card-img-top" src="{{ m.profilePic}}" alt="Card image"> </a>
+              <div class="card-body bg-pink-2">
+                <h4 class="card-title"> {{ m.hangeul }} </h4>
+                <p class="card-text"> <small> {{ m.position }} </small>
+                </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<nav id="navbar" class="navbar navbar-expand-sm bg-pink-5 navbar-light nav-opacity sticky">
+    
+  <div class="container">
+      <a class="navbar-brand" routerLink="">
+        <img src="https://i.pinimg.com/originals/8a/db/2d/8adb2dbb10de5c5bcbdfd92a9f4319ab.png" class="nav-banner-img" alt="">
+      
+      </a>
+        <div>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"
+                  [routerLinkActive]="['active']"
+                  [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link" routerLink="">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item"
+                  [routerLinkActive]="['active']"
+                  [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link" routerLink="/members">
+                  Members
+                </a>
+              </li>
+              <li class="nav-item"
+                  [routerLinkActive]="['active']"
+                  [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link" routerLink="/fansites-directory">
+                  Fansites Directory
+                </a>
+              </li>
+            </ul>
+        </div>
+        
+    </div>
+</nav>

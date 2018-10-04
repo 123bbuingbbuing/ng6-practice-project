@@ -1,0 +1,145 @@
+<div class="container" *ngIf="member">
+    <button class="btn btn-icon float-right mb-3 mt-3" routerLink="/members"><i class="fa fa-close"></i>&nbsp;<span class="hidden-xs"></span> </button>
+
+  <div class="container">
+    <div class="profile-id-card mt-5">
+      <img class="align-self-start rounded mx-auto mt-3 member-img"
+           src="{{ member.profilePic }}" alt="Generic placeholder imag">
+      <div class="card-body">
+        <h3 class="text-center"> {{ member.hangeul }} </h3>
+        <h4 class="text-center">{{member.name}}</h4>
+        <ul class="list-unstyled">
+          <li>
+           <i class="fa fa-id-card"></i>&nbsp;{{member.position}}
+          </li>
+          <li>
+            <i class="fa fa-twitter"></i> <a href="https://twitter.com/itslucasman" class="c-pink-5"> itslucasman</a>
+          </li>
+          <li>
+            <i class="fa fa-tumblr"></i> <a href="https://123bbuingbbuing.tumblr.com" class="c-pink-5" > 123bbuingbbuing</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class=" profile-basic-info-container mt-5 shadow-lg p-3  o-pink-1 rounded">
+      <div class="card-body">
+        <ul class="list-unstyled">
+          <li class="mb-2">
+           <b>Name :</b>  {{member.name}}
+          </li>
+          <li class="mb-2">
+            <b>Birthdate :</b> {{ member.birthday | date}}
+          </li>
+          <li class="mb-2">
+            <b>Age :</b> 19
+          </li>
+          <li class="mb-2">
+            <b>Blood Type :</b> {{ member.bloodtype }}
+          </li>
+          <li class="mb-2">
+            <b>Height :</b> {{ member.height }}
+          </li>
+          <li class="mb-2">
+            <b>Language(s) :</b> {{ member.languages }}
+          </li>
+          <li class="mb-2">
+            <b>Address :</b> {{ member.hometown }}
+          </li>
+          <li class="mb-2">
+            <b>Position :</b> {{ member.position }}
+          </li>
+          <li class="mb-2">
+            <b>Company :</b> {{ member.entertainment }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="mt-3 mb-3">Discography</h2>
+
+    <div class="row" >
+        <div class="col-sm-3" *ngFor="let a of member.albums">
+            <div class="card mb-3">
+                <button type="button" class="btn btn-pink-2" data-toggle="modal" data-target="#albumModal" (click)="getAlbumData(a)" >
+                    <img class="card-img-top grow" src="{{ a.thumbnail }}" alt="Card image">
+                </button>
+                
+                <div class="card-body bg-pink-2">
+                    {{ a.album }}
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  </div>
+
+  <!-- album info modal -->
+  <!-- <div class="modal fade bg-pink-1" id="albumModal" tabindex="-1" role="dialog"
+       aria-labelledby="albumModalTitle" aria-hidden="true">
+      <div class="modal-lg modal-dialog-centered mx-auto" role="document">
+        <div class="modal-content-custom bg-pink-2">
+          <div class="modal-header">
+            <h5 class="modal-title" id="albumModalLongTitle"> </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" *ngIf="albumInfo">
+              <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img *ngFor="let p of albumInfo.photos"  src=" {{p.pic}} " alt="" />
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+  </div> -->
+
+  <div class="modal fade" id="albumModal" tabindex="-1" role="dialog" aria-labelledby="albumModalTitle" aria-hidden="true">
+      <div class="modal-lg  modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content-custom bg-pink-2">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle"> {{ albumInfo.album }} </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" *ngIf="albumInfo">
+              <div class="container-fluid">
+                  <div class="row">
+                    <!-- <div class="col-md-3">
+                      <img src=" {{albumInfo.photos}} " alt="" />
+                    </div> -->
+                    <div class="">
+                        <table class="table">
+                          <thead>
+                            <th>Track #</th>
+                            <th>Title</th>
+                            <th>Genre</th>
+                            <th>Lyrics By</th>
+                            <th>Composed By</th>
+                          </thead>
+                          <tr *ngFor="let t of albumInfo.tracklist">
+                            <td class="text-center"> {{ t.trackNo }} </td>
+                            <td> {{ t.title }} </td>
+                            <td> {{ t.genre }} </td>
+                            <td> {{ t.lyricsBy }} </td>
+                            <td> {{ t.composedBy }} </td>
+                          </tr>
+                        </table>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div> -->
+        </div>
+      </div>
+    </div>

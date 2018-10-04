@@ -1,0 +1,290 @@
+/* You can add global styles to this file, and also import other style files */
+.member-img {
+  display: block;
+  max-width: 80%;;
+  height: auto;
+}
+
+.bg-pink-1, .btn-pink-1{
+    background-color: #f4e7e7;
+}
+
+.bg-pink-2, .btn-pink-2 {
+    background-color: #eedbdb;
+}
+
+.bg-pink-3, .btn-pink-3 {
+    background-color: #eec9d2;
+}
+
+.bg-pink-4, .btn-pink-4 {
+    background-color: #f4b6c2 ;
+}
+
+.bg-pink-5, .btn-pink-5 {
+    background-color: #f6abb6 ;
+}
+
+.bg-pink-1-opaque {
+  background-color: #f4e7e7;
+  opacity: .30;
+}
+
+.c-pink-1 {
+  color: #f4e7e7;
+}
+
+.c-pink-2 {
+  color: #eedbdb; 
+  height: 100%;
+}
+
+.c-pink-3 {
+  color: #eec9d2;
+}
+
+.c-pink-4 {
+  color: #f4b6c2 ;
+}
+
+.c-pink-5 {
+  color: #f6abb6 ;
+}
+
+.btn-icon {
+  background-color: transparent;
+}
+
+
+.c-pink-1:hover, .c-pink-2:hover, .c-pink-3:hover, .c-pink-4:hover, .c-pink-5:hover, .btn-icon:hover,
+.btn-pink-1:hover, .btn-pink-2:hover, .btn-pink-3:hover, .btn-pink-4:hover, 
+.btn-pink-5:hover {
+  color: #fdf9ff;
+  background-color: #f6abb6;
+  border-radius: 2%;
+  opacity: .30;
+  display: inline-block; 
+  text-decoration:none !important;
+}
+
+.o-pink-1 {
+  background-color: #fdf9ff;
+  border-radius: 2%;
+  opacity: .75;
+}
+
+
+.nav-banner-img {
+    display: block;
+    max-width: 50px;;
+    height: auto;
+}
+
+.footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f4e7e7;
+    color: #d1d1d1;
+    text-align: center;
+ }
+
+ .grow img {
+  height: 300px;
+  width: 300px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.grow img:hover {
+  width: 400px;
+  height: 400px;
+}
+
+.modal-content-custom {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-clip: padding-box;
+  border-radius: 0.3rem;
+  outline: 0;
+}
+
+ @media (max-width: 575.98px) { 
+    .visible-xs {
+      /* visibility: visible; */
+      display: inline-block;
+    }
+    .hidden-xs {
+      /* visibility: hidden; */
+      display: none;
+    }
+    .profile-id-card {
+      width: 100% !important;
+    }
+    .contact-img {
+      display: block;
+      max-width: 80%;;
+      height: auto;
+    }
+    .profile-basic-info-container {
+      display: inline;
+      width: 100%;
+      position: relative;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      border-radius: 0.25rem;
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 767.98px) { 
+    .visible-xs {
+      /* visibility: hidden; */
+      display: none;
+    }
+    .hidden-xs {
+      /* visibility: visible; */
+      display: inline-block;
+    }
+    .profile-id-card {
+      width: 50% !important;
+      float: left;
+    }
+    .profile-basic-info-container {
+      display: inline-block;
+      width: 50%;
+      position: relative;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      border-radius: 0.25rem;
+    }
+    .contact-img {
+      display: block;
+      max-width: 200px;;
+      height: 200px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991.98px) { 
+    .visible-xs {
+      visibility: hidden;
+      display: none;
+    }
+    .hidden-xs {
+      /* visibility: visible; */
+      display: inline-block;
+    }
+    .profile-id-card {
+      width: 35% !important;
+      float: left;
+    }
+    .profile-basic-info-container {
+      display: inline;
+      width: 64%;
+      position: relative;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      border-radius: 0.25rem;
+    }
+    .contact-img {
+      display: block;
+      max-width: 200px;;
+      height: 200px;
+    }
+  }
+  
+  @media (min-width: 992px) and (max-width: 1199.98px) { 
+    .visible-xs {
+      visibility: hidden;
+      display: none;
+    }
+    .hidden-xs {
+      /* visibility: visible; */
+      display: inline-block;
+    }
+    .profile-id-card {
+      width: 35% !important;
+      float: left;
+    }
+    .contact-img {
+      display: block;
+      max-width: 200px;;
+      height: 200px;
+    }
+    .profile-basic-info-container {
+      display: inline;
+      width: 64%;
+      position: relative;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      border-radius: 0.25rem;
+    }
+  }
+  
+  @media (min-width: 1200px) { 
+    .visible-xs {
+      visibility: hidden;
+      display: none;
+    }
+    .hidden-xs {
+      /* visibility: visible; */
+      display: inline-block;
+    }
+    .profile-id-card {
+      width: 30% !important;
+      float: left;
+      display: inline-block;
+    }
+    .profile-basic-info-container {
+      display: inline;
+      width: 69%;
+      position: relative;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-clip: border-box;
+      border-radius: 0.25rem;
+    }
+    .contact-img {
+      display: block;
+      max-width: 200px;;
+      height: 200px;
+    }
+  }
+  
